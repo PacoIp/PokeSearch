@@ -14,7 +14,6 @@
             --text-main: #F8FAFC;
             --text-sub: #94A3B8;
         }
-
         /* 屬性配色 */
         .type-normal { background: #A8A878; }
         .type-fire { background: #F08030; }
@@ -34,10 +33,7 @@
         .type-steel { background: #B8B8D0; color: #333; }
         .type-fairy { background: #EE99AC; color: #333; }
         .type-dark { background: #705848; }
-
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
-
-        /* 背景：高飽和鮮艷紅白精靈球圖騰 */
         body {
             background-color: #0c1429;
             color: var(--text-main);
@@ -45,11 +41,10 @@
             padding: 20px;
             background-image: 
                 radial-gradient(circle at 50% 50%, rgba(12, 20, 41, 0.65), rgba(4, 7, 18, 0.92)),
-                url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.45'%3E%3Cpath d='M50 5 A45 45 0 0 1 95 50 L68 50 A18 18 0 0 0 32 50 L5 50 A45 45 0 0 1 50 5 Z' fill='%23FF1E1E'/%3E%3Cpath d='M50 95 A45 45 0 0 1 5 50 L32 50 A18 18 0 0 0 68 50 L95 50 A45 45 0 0 1 50 95 Z' fill='%23FFFFFF'/%3E%3Cpath d='M5 45 L32 45 A18 18 0 0 1 68 45 L95 45 L95 55 L68 55 A18 18 0 0 1 32 55 L5 55 Z' fill='%23000000'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23FFFFFF' stroke='%23000000' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+                url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.45'%3E%3Cpath d='M50 5 A45 45 0 0 1 95 50 L68 50 A18 18 0 0 0 32 50 L5 50 A45 45 0 0 1 5 5 Z' fill='%23FF1E1E'/%3E%3Cpath d='M50 95 A45 45 0 0 1 5 50 L32 50 A18 18 0 0 0 68 50 L95 50 A45 45 0 0 1 50 95 Z' fill='%23FFFFFF'/%3E%3Cpath d='M5 45 L32 45 A18 18 0 0 1 68 45 L95 45 L95 55 L68 55 A18 18 0 0 1 32 55 L5 55 Z' fill='%23000000'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23FFFFFF' stroke='%23000000' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
             background-repeat: repeat;
             background-attachment: fixed;
         }
-
         header { text-align: center; margin-bottom: 25px; }
         header h1 {
             font-size: 2.5rem;
@@ -57,10 +52,7 @@
             text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 203, 5, 0.5);
             display: flex; align-items: center; justify-content: center; gap: 14px;
         }
-
         .container { max-width: 1400px; margin: 0 auto; }
-
-        /* 控制面板卡片 */
         .search-box-card {
             background: rgba(16, 29, 54, 0.92);
             backdrop-filter: blur(16px);
@@ -70,190 +62,70 @@
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
             margin-bottom: 25px;
         }
-
-        /* 類型列 */
-        .category-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-
-        /* 最左側否定 (不是) 按鈕 */
+        .category-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
         .btn-negate {
-            background: #2D3748;
-            color: #EF4444;
-            border: 2px solid #EF4444;
-            padding: 9px 18px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
+            background: #2D3748; color: #EF4444; border: 2px solid #EF4444;
+            padding: 9px 18px; border-radius: 12px; font-weight: bold; font-size: 15px;
+            cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px; white-space: nowrap;
         }
         .btn-negate:hover { background: rgba(239, 68, 68, 0.15); }
         .btn-negate.active {
-            background: linear-gradient(135deg, #EF4444, #B91C1C);
-            color: white;
-            border-color: #FCA5A5;
+            background: linear-gradient(135deg, #EF4444, #B91C1C); color: white; border-color: #FCA5A5;
             box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
         }
-
-        /* 一般功能按鈕格子 */
         .cat-btn {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #E2E8F0;
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex; align-items: center; gap: 8px;
+            background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #E2E8F0; padding: 10px 18px; border-radius: 12px; font-size: 15px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px;
         }
-        .cat-btn:hover, .cat-btn.active {
-            background: rgba(56, 189, 248, 0.25);
-            border-color: #38BDF8;
-            color: #38BDF8;
-        }
-
-        /* 輸入型的按鈕格子 (編號、名字、倍數) */
+        .cat-btn:hover, .cat-btn.active { background: rgba(56, 189, 248, 0.25); border-color: #38BDF8; color: #38BDF8; }
         .input-chip-box {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 6px 10px;
-            gap: 8px;
-            transition: all 0.2s ease;
+            display: flex; align-items: center; background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 6px 10px; gap: 8px; transition: all 0.2s ease;
         }
-        .input-chip-box:focus-within {
-            background: rgba(56, 189, 248, 0.15);
-            border-color: #38BDF8;
-            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
-        }
+        .input-chip-box:focus-within { background: rgba(56, 189, 248, 0.15); border-color: #38BDF8; box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); }
         .input-chip-box i { color: #38BDF8; font-size: 14px; }
-        .input-chip-box input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #FFF;
-            font-size: 14px;
-            font-weight: 500;
-            width: 85px;
-        }
+        .input-chip-box input { background: transparent; border: none; outline: none; color: #FFF; font-size: 14px; font-weight: 500; width: 85px; }
         .input-chip-box input::placeholder { color: #94A3B8; }
         
         .add-chip-btn {
-            background: rgba(56, 189, 248, 0.2);
-            border: 1px solid rgba(56, 189, 248, 0.4);
-            color: #38BDF8;
-            border-radius: 8px;
-            width: 26px;
-            height: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 13px;
-            transition: all 0.2s ease;
+            background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #38BDF8; border-radius: 8px; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 13px; transition: all 0.2s ease;
         }
-        .add-chip-btn:hover {
-            background: #38BDF8;
-            color: #000;
-        }
-
+        .add-chip-btn:hover { background: #38BDF8; color: #000; }
         .btn-reset {
-            margin-left: auto;
-            background: linear-gradient(135deg, #EF4444, #DC2626);
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex; align-items: center; gap: 8px;
+            margin-left: auto; background: linear-gradient(135deg, #EF4444, #DC2626);
+            color: white; border: none; padding: 10px 18px; border-radius: 12px; font-weight: bold; font-size: 15px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px;
         }
         .btn-reset:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4); }
-
-        /* 展開之子選單面板 */
         .sub-panel {
-            background: rgba(11, 19, 41, 0.95);
-            border: 1px dashed rgba(56, 189, 248, 0.35);
-            border-radius: 12px;
-            padding: 14px 18px;
-            margin-top: 15px;
-            display: none;
-            flex-wrap: wrap;
-            gap: 10px;
-            animation: fadeIn 0.2s ease-in-out;
+            background: rgba(11, 19, 41, 0.95); border: 1px dashed rgba(56, 189, 248, 0.35);
+            border-radius: 12px; padding: 14px 18px; margin-top: 15px; display: none; flex-wrap: wrap; gap: 10px; animation: fadeIn 0.2s ease-in-out;
         }
         .sub-panel.active { display: flex; }
-
-        .sub-chip {
-            padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 500;
-            cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.08); color: #FFF;
-        }
+        .sub-chip { padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.08); color: #FFF; }
         .sub-chip:hover { transform: scale(1.05); }
-
-        /* 已疊加條件標籤 */
-        .active-filters {
-            display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-            min-height: 38px; margin-top: 15px; padding-top: 12px; border-top: 1px dashed rgba(255, 255, 255, 0.1);
-        }
-
+        .active-filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; min-height: 38px; margin-top: 15px; padding-top: 12px; border-top: 1px dashed rgba(255, 255, 255, 0.1); }
         .filter-tag {
-            background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: white;
-            padding: 6px 14px; border-radius: 20px; font-size: 14px;
-            display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: white; padding: 6px 14px; border-radius: 20px; font-size: 14px; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        .filter-tag.negative {
-            background: linear-gradient(135deg, #EF4444, #B91C1C);
-        }
-        .filter-tag .remove-btn {
-            cursor: pointer; background: rgba(0,0,0,0.25); border-radius: 50%;
-            width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 11px;
-        }
+        .filter-tag.negative { background: linear-gradient(135deg, #EF4444, #B91C1C); }
+        .filter-tag .remove-btn { cursor: pointer; background: rgba(0,0,0,0.25); border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 11px; }
         .filter-tag .remove-btn:hover { background: #000; }
-
-        /* 寶可夢卡片區塊 */
         .results-info { margin-bottom: 15px; color: var(--text-sub); font-size: 15px; display: flex; justify-content: space-between; font-weight: bold; }
         .pokemon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 20px; }
-
         .pokemon-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 18px; padding: 18px; text-align: center; position: relative;
-            cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+            background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 18px; padding: 18px; text-align: center; position: relative; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.4);
         }
-        .pokemon-card:hover {
-            transform: translateY(-6px) scale(1.02);
-            border-color: rgba(56, 189, 248, 0.6);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.25);
-        }
-
-        .card-id {
-            position: absolute; top: 12px; left: 14px; font-size: 12px; font-weight: bold;
-            color: var(--text-sub); background: rgba(0,0,0,0.4); padding: 2px 8px; border-radius: 10px;
-        }
+        .pokemon-card:hover { transform: translateY(-6px) scale(1.02); border-color: rgba(56, 189, 248, 0.6); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.25); }
+        .card-id { position: absolute; top: 12px; left: 14px; font-size: 12px; font-weight: bold; color: var(--text-sub); background: rgba(0,0,0,0.4); padding: 2px 8px; border-radius: 10px; }
         .card-img { width: 110px; height: 110px; object-fit: contain; margin: 10px 0; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)); }
         .card-title { font-size: 1.15rem; font-weight: bold; color: #FFF; margin-bottom: 2px; }
         .card-en-name { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 10px; }
-
         .type-badges { display: flex; justify-content: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
         .type-badge { padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
         .special-badges { display: flex; justify-content: center; gap: 5px; font-size: 10px; }
         .badge-special { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 2px 6px; border-radius: 6px; color: #FCD34D; }
-
         /* Modal 彈窗 */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -261,7 +133,6 @@
             display: none; justify-content: center; align-items: center; z-index: 1000;
         }
         .modal-overlay.active { display: flex; }
-
         .modal-content {
             background: #101D36; border: 1px solid var(--card-border);
             width: 90%; max-width: 650px; max-height: 85vh; border-radius: 24px;
@@ -274,99 +145,78 @@
             background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;
         }
         .close-modal:hover { background: #EF4444; color: white; }
-
-        /* 形態切換按鈕區域 (Mega / 極巨化 頁籤) */
-        .forms-tab-bar {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-            flex-wrap: wrap;
+        /* 控制區域：普通/異色 與 形態選擇 (僅文字，無圖案) */
+        .control-group {
+            display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;
+            padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         }
+        .tab-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .tab-label { font-size: 13px; color: var(--text-sub); font-weight: bold; min-width: 70px; }
         .form-tab-btn {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #E2E8F0;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #E2E8F0; padding: 7px 16px; border-radius: 18px; font-size: 14px;
+            font-weight: bold; cursor: pointer; transition: all 0.2s ease;
         }
-        .form-tab-btn:hover {
-            background: rgba(56, 189, 248, 0.2);
-            border-color: #38BDF8;
-        }
+        .form-tab-btn:hover { background: rgba(56, 189, 248, 0.2); border-color: #38BDF8; }
         .form-tab-btn.active {
             background: linear-gradient(135deg, #38BDF8, #0284C7);
-            border-color: #7DD3FC;
-            color: #FFF;
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+            border-color: #7DD3FC; color: #FFF; box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
         }
-
         .modal-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
         .modal-header img { width: 140px; height: 140px; object-fit: contain; transition: all 0.3s ease; }
+        
+        /* 固定彈窗內屬性標籤區塊的高與排版，避免動態跳動 */
+        .modal-header .type-badges {
+            justify-content: flex-start;
+            min-height: 28px;
+            align-items: center;
+            margin-bottom: 0;
+        }
 
         .modal-info-grid {
             display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
             background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; margin-bottom: 20px; font-size: 14px;
         }
-
         .evolution-section { margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
         .evolution-title { font-size: 1.1rem; font-weight: bold; color: #38BDF8; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
         .evolution-chain { display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 15px; background: rgba(11, 19, 41, 0.6); padding: 15px; border-radius: 15px; }
         .evo-node { text-align: center; }
         .evo-node img { width: 65px; height: 65px; object-fit: contain; }
         .no-result { grid-column: 1 / -1; text-align: center; padding: 50px; color: var(--text-sub); font-size: 1.2rem; }
-
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-
     <div class="container">
         <header>
             <h1><i class="fa-solid fa-gamepad" style="color:#EF4444;"></i> 寶可夢圖鑒</h1>
         </header>
-
         <div class="search-box-card">
             <div class="category-bar">
                 <button id="btn-negate" class="btn-negate" onclick="toggleNegateMode()">
                     <i class="fa-solid fa-xmark" style="font-size: 18px;"></i> 不是
                 </button>
-
                 <button class="cat-btn" onclick="togglePanel('types')"><i class="fa-solid fa-fire"></i> 屬性 ▾</button>
                 <button class="cat-btn" onclick="togglePanel('gen')"><i class="fa-solid fa-layer-group"></i> 世代 ▾</button>
-
                 <div class="input-chip-box">
                     <i class="fa-solid fa-hashtag"></i>
                     <input type="number" id="field-number" placeholder="編號" onkeydown="if(event.key==='Enter') submitNumber()">
                     <button class="add-chip-btn" onclick="submitNumber()"><i class="fa-solid fa-plus"></i></button>
                 </div>
-
                 <div class="input-chip-box">
                     <i class="fa-solid fa-font"></i>
                     <input type="text" id="field-name" placeholder="名字" onkeydown="if(event.key==='Enter') submitName()">
                     <button class="add-chip-btn" onclick="submitName()"><i class="fa-solid fa-plus"></i></button>
                 </div>
-
                 <div class="input-chip-box">
                     <i class="fa-solid fa-calculator"></i>
                     <input type="number" id="field-multi" placeholder="倍數" onkeydown="if(event.key==='Enter') submitMultiple()">
                     <button class="add-chip-btn" onclick="submitMultiple()"><i class="fa-solid fa-plus"></i></button>
                 </div>
-
-                <button class="cat-btn" onclick="addDirectFilter('mega')"><i class="fa-solid fa-bolt"></i> 超級進化</button>
-                <button class="cat-btn" onclick="addDirectFilter('gmax')"><i class="fa-solid fa-shield-halved"></i> 極巨化</button>
-
+                <button class="cat-btn" onclick="addDirectFilter('mega')"> 超級進化</button>
+                <button class="cat-btn" onclick="addDirectFilter('gmax')"> 極巨化</button>
                 <button class="btn-reset" onclick="resetAll()"><i class="fa-solid fa-rotate-left"></i> 清除重置</button>
             </div>
-
             <div class="sub-panel" id="panel-types">
                 <span class="sub-chip type-grass" onclick="addTypeFilter('草')">草</span>
                 <span class="sub-chip type-fire" onclick="addTypeFilter('火')">火</span>
@@ -387,7 +237,6 @@
                 <span class="sub-chip type-fairy" onclick="addTypeFilter('妖精')">妖精</span>
                 <span class="sub-chip type-dark" onclick="addTypeFilter('惡')">惡</span>
             </div>
-
             <div class="sub-panel" id="panel-gen">
                 <span class="sub-chip" onclick="addGenFilter(1)">第 1 世代 (關都)</span>
                 <span class="sub-chip" onclick="addGenFilter(2)">第 2 世代 (城都)</span>
@@ -399,28 +248,35 @@
                 <span class="sub-chip" onclick="addGenFilter(8)">第 8 世代 (伽勒爾)</span>
                 <span class="sub-chip" onclick="addGenFilter(9)">第 9 世代 (帕底亞)</span>
             </div>
-
             <div class="active-filters" id="filter-tags-container">
                 <span style="color: var(--text-sub); font-size: 13px;">目前無疊加條件</span>
             </div>
         </div>
-
         <div class="results-info">
             <span id="results-count">正在載入全 1025 隻寶可夢資料...</span>
-            <span>圖鑑顯示範圍：全 1025 隻</span>
+            <span>圖鑒顯示範圍：全 1025 隻</span>
         </div>
-
         <div class="pokemon-grid" id="pokemon-grid"></div>
     </div>
-
     <!-- 詳情 Modal -->
     <div class="modal-overlay" id="detail-modal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="close-modal" onclick="hideModal()"><i class="fa-solid fa-xmark"></i></div>
             
-            <!-- 形態切換按鈕列 (當有 Mega / 極巨化 時自動生成) -->
-            <div class="forms-tab-bar" id="m-forms-container"></div>
-
+            <!-- 控制區域：普通/異色 與 形態選擇 (僅文字，無圖案) -->
+            <div class="control-group">
+                <!-- 分類：普通 / Shiny (純文字) -->
+                <div class="tab-row">
+                    <span class="tab-label">配色分類：</span>
+                    <button class="form-tab-btn active" id="btn-color-normal" onclick="switchColorMode(false)">普通</button>
+                    <button class="form-tab-btn" id="btn-color-shiny" onclick="switchColorMode(true)">Shiny</button>
+                </div>
+                <!-- 形態選擇：一般 / Mega / 超極巨化 (純文字) -->
+                <div class="tab-row" id="forms-row-container" style="display: none;">
+                    <span class="tab-label">形態選擇：</span>
+                    <div id="m-forms-container" style="display: flex; gap: 8px; flex-wrap: wrap;"></div>
+                </div>
+            </div>
             <div class="modal-header">
                 <img id="m-img" src="" alt="">
                 <div>
@@ -429,7 +285,6 @@
                     <div id="m-types" class="type-badges"></div>
                 </div>
             </div>
-
             <div class="modal-info-grid">
                 <div><strong>圖鑑編號：</strong> <span id="m-id">--</span></div>
                 <div><strong>所屬世代：</strong> <span id="m-gen">--</span></div>
@@ -438,7 +293,6 @@
                 <div><strong>超級進化：</strong> <span id="m-mega">--</span></div>
                 <div><strong>超極巨化：</strong> <span id="m-gmax">--</span></div>
             </div>
-
             <div class="evolution-section">
                 <div class="evolution-title"><i class="fa-solid fa-diagram-project"></i> 進化鏈 (Evolution Chain)</div>
                 <div class="evolution-chain" id="evolution-chain-container">
@@ -447,7 +301,6 @@
             </div>
         </div>
     </div>
-
     <script>
         const typeDict = {
             '草': 'grass', '毒': 'poison', '火': 'fire', '飛行': 'flying',
@@ -456,21 +309,22 @@
             '超能力': 'psychic', '冰': 'ice', '幽靈': 'ghost', '龍': 'dragon',
             '惡': 'dark', '鋼': 'steel'
         };
-
         const typeZhDict = {
             'grass': '草', 'poison': '毒', 'fire': '火', 'flying': '飛行', 'water': '水',
             'bug': '蟲', 'normal': '一般', 'electric': '電', 'ground': '地面', 'rock': '岩石',
             'fairy': '妖精', 'fighting': '格鬥', 'psychic': '超能力', 'ice': '冰',
             'ghost': '幽靈', 'dragon': '龍', 'dark': '惡', 'steel': '鋼'
         };
-
         const megaIds = [3, 6, 9, 15, 18, 65, 80, 94, 115, 127, 130, 142, 150, 181, 208, 212, 214, 229, 248, 254, 257, 260, 282, 302, 303, 306, 308, 310, 319, 323, 334, 354, 359, 362, 373, 376, 380, 381, 384, 428, 445, 448, 460, 475, 531, 719];
         const gmaxIds = [3, 6, 9, 12, 25, 52, 68, 94, 99, 131, 133, 143, 569, 809, 812, 815, 818, 823, 826, 834, 838, 841, 842, 844, 849, 851, 858, 861, 869, 879, 884, 892];
-
         let allPokemon = [];
         let activeFilters = [];
         let isNegateMode = false;
-        let currentVarietiesData = []; // 儲存目前 Modal 打開的寶可夢所有形態資料
+        let currentVarietiesData = [];
+        let currentPokemonId = 1;
+        let currentBaseZhName = "";
+        let isShinyMode = false;
+        let currentFormIndex = 0;
 
         function initData() {
             for (let id = 1; id <= 1025; id++) {
@@ -500,7 +354,6 @@
                         const speciesId = parseInt(cols[0]);
                         const langId = parseInt(cols[1]);
                         const name = cols[2].trim();
-
                         if (speciesId >= 1 && speciesId <= 1025) {
                             if (langId === 4 || (langId === 12 && !allPokemon[speciesId-1].isZhLoaded)) {
                                 allPokemon[speciesId-1].nameZh = name;
@@ -512,7 +365,6 @@
                         }
                     }
                 });
-
                 document.getElementById('results-count').innerText = `全 1025 隻寶可夢資料載入完成！`;
                 applyFilters();
             } catch (err) {}
@@ -556,22 +408,16 @@
         function toggleNegateMode() {
             isNegateMode = !isNegateMode;
             const btn = document.getElementById('btn-negate');
-            if (isNegateMode) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
+            if (isNegateMode) btn.classList.add('active');
+            else btn.classList.remove('active');
         }
 
         function togglePanel(panelName) {
             const panels = ['types', 'gen'];
             panels.forEach(p => {
                 const el = document.getElementById(`panel-${p}`);
-                if (p === panelName) {
-                    el.classList.toggle('active');
-                } else {
-                    el.classList.remove('active');
-                }
+                if (p === panelName) el.classList.toggle('active');
+                else el.classList.remove('active');
             });
         }
 
@@ -581,11 +427,9 @@
             if (!val) return;
             const num = parseInt(val);
             if (isNaN(num)) return;
-
             const isNegate = isNegateMode;
             addFilterAndReset({
-                id: Date.now(),
-                isNegative: isNegate,
+                id: Date.now(), isNegative: isNegate,
                 text: isNegate ? `編號不是 #${num}` : `編號是 #${num}`,
                 fn: p => isNegate ? p.id !== num : p.id === num
             });
@@ -596,11 +440,9 @@
             const input = document.getElementById('field-name');
             const val = input.value.trim();
             if (!val) return;
-
             const isNegate = isNegateMode;
             addFilterAndReset({
-                id: Date.now(),
-                isNegative: isNegate,
+                id: Date.now(), isNegative: isNegate,
                 text: isNegate ? `名字不含 "${val}"` : `名字包含 "${val}"`,
                 fn: p => isNegate ? 
                     (!p.nameZh.includes(val) && !p.nameEn.toLowerCase().includes(val.toLowerCase())) :
@@ -615,11 +457,9 @@
             if (!val) return;
             const num = parseInt(val);
             if (isNaN(num) || num <= 0) return;
-
             const isNegate = isNegateMode;
             addFilterAndReset({
-                id: Date.now(),
-                isNegative: isNegate,
+                id: Date.now(), isNegative: isNegate,
                 text: isNegate ? `編號不是 ${num} 的倍數` : `編號是 ${num} 的倍數`,
                 fn: p => isNegate ? p.id % num !== 0 : p.id % num === 0
             });
@@ -630,8 +470,7 @@
             const engType = typeDict[zhType];
             const isNegate = isNegateMode;
             addFilterAndReset({
-                id: Date.now(),
-                isNegative: isNegate,
+                id: Date.now(), isNegative: isNegate,
                 text: isNegate ? `不是 [${zhType}] 屬性` : `是 [${zhType}] 屬性`,
                 fn: p => isNegate ? !p.types.includes(engType) : p.types.includes(engType)
             });
@@ -640,8 +479,7 @@
         function addGenFilter(genNum) {
             const isNegate = isNegateMode;
             addFilterAndReset({
-                id: Date.now(),
-                isNegative: isNegate,
+                id: Date.now(), isNegative: isNegate,
                 text: isNegate ? `不屬於第 ${genNum} 世代` : `屬於第 ${genNum} 世代`,
                 fn: p => isNegate ? p.gen !== genNum : p.gen === genNum
             });
@@ -651,19 +489,9 @@
             const isNegate = isNegateMode;
             let filterObj;
             if (type === 'mega') {
-                filterObj = {
-                    id: Date.now(),
-                    isNegative: isNegate,
-                    text: isNegate ? `不能超級進化 (Mega)` : `可以超級進化 (Mega)`,
-                    fn: p => isNegate ? !p.mega : p.mega
-                };
+                filterObj = { id: Date.now(), isNegative: isNegate, text: isNegate ? `不能超級進化 (Mega)` : `可以超級進化 (Mega)`, fn: p => isNegate ? !p.mega : p.mega };
             } else if (type === 'gmax') {
-                filterObj = {
-                    id: Date.now(),
-                    isNegative: isNegate,
-                    text: isNegate ? `不能極巨化 (G-Max)` : `可以極巨化 (G-Max)`,
-                    fn: p => isNegate ? !p.gmax : p.gmax
-                };
+                filterObj = { id: Date.now(), isNegative: isNegate, text: isNegate ? `不能極巨化 (G-Max)` : `可以極巨化 (G-Max)`, fn: p => isNegate ? !p.gmax : p.gmax };
             }
             addFilterAndReset(filterObj);
         }
@@ -698,7 +526,6 @@
                 container.innerHTML = `<span style="color: var(--text-sub); font-size: 13px;">目前無疊加條件</span>`;
                 return;
             }
-
             container.innerHTML = activeFilters.map(f => `
                 <div class="filter-tag ${f.isNegative ? 'negative' : ''}">
                     <span>${f.text}</span>
@@ -709,22 +536,17 @@
 
         function applyFilters() {
             let results = allPokemon;
-            activeFilters.forEach(f => {
-                results = results.filter(f.fn);
-            });
-
+            activeFilters.forEach(f => { results = results.filter(f.fn); });
             document.getElementById('results-count').innerText = `搜尋結果：共 ${results.length} 隻寶可夢`;
             renderPokemonGrid(results);
         }
 
         function renderPokemonGrid(data) {
             const grid = document.getElementById('pokemon-grid');
-            
             if (data.length === 0) {
                 grid.innerHTML = `<div class="no-result">😭 找不到符合條件的寶可夢，請刪除部分標籤重試！</div>`;
                 return;
             }
-
             let htmlContent = '';
             data.forEach(p => {
                 const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`;
@@ -733,7 +555,6 @@
                 let specialBadges = '';
                 if (p.mega) specialBadges += `<span class="badge-special">Mega</span>`;
                 if (p.gmax) specialBadges += `<span class="badge-special">極巨化</span>`;
-
                 htmlContent += `
                     <div class="pokemon-card" onclick="openDetailModal(${p.id})">
                         <div class="card-id">#${String(p.id).padStart(4, '0')}</div>
@@ -745,18 +566,23 @@
                     </div>
                 `;
             });
-
             grid.innerHTML = htmlContent;
         }
 
-        /* 開啟 Modal 並初始化形態按鈕與資料 */
+        /* 開啟 Modal */
         async function openDetailModal(id) {
             const p = allPokemon[id - 1];
+            currentPokemonId = p.id;
+            currentBaseZhName = p.nameZh;
+            isShinyMode = false;
+            currentFormIndex = 0;
+            // 重置「普通/異色」按鈕高亮
+            document.getElementById('btn-color-normal').classList.add('active');
+            document.getElementById('btn-color-shiny').classList.remove('active');
             const modal = document.getElementById('detail-modal');
-
-            // 預設重置 Modal 內容
             document.getElementById('m-forms-container').innerHTML = '';
-            document.getElementById('m-img').src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`;
+            document.getElementById('forms-row-container').style.display = 'none';
+            updateArtworkImage();
             document.getElementById('m-title').innerText = p.nameZh;
             document.getElementById('m-en-title').innerText = `${p.nameEn} (#${p.id})`;
             document.getElementById('m-id').innerText = `#${p.id}`;
@@ -764,67 +590,57 @@
             document.getElementById('m-mega').innerText = p.mega ? '✅ 支持' : '❌ 無';
             document.getElementById('m-gmax').innerText = p.gmax ? '✅ 支持' : '❌ 無';
             document.getElementById('m-types').innerHTML = p.types.map(t => `<span class="type-badge type-${t}">${typeZhDict[t] || t}</span>`).join('');
-
             modal.classList.add('active');
             fetchPokemonDetails(p.id, p.nameZh);
         }
 
-        /* 獲取詳情與 Mega / 極巨化 形態選項 */
+        /* 切換「普通 / 異色」分類 */
+        function switchColorMode(isShiny) {
+            isShinyMode = isShiny;
+            if (isShiny) {
+                document.getElementById('btn-color-shiny').classList.add('active');
+                document.getElementById('btn-color-normal').classList.remove('active');
+            } else {
+                document.getElementById('btn-color-normal').classList.add('active');
+                document.getElementById('btn-color-shiny').classList.remove('active');
+            }
+            switchForm(currentFormIndex, currentBaseZhName);
+        }
+
+        /* 抓取詳情與形態列表 (純文字按鈕) */
         async function fetchPokemonDetails(id, baseZhName) {
             const evoContainer = document.getElementById('evolution-chain-container');
+            const formsRow = document.getElementById('forms-row-container');
             const formsContainer = document.getElementById('m-forms-container');
             evoContainer.innerHTML = `<div style="color: var(--text-sub);">載入詳細數據與進化鏈中...</div>`;
-
             try {
-                // 1. 取得基本數據 (身高體重)
                 const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
                 const data = await res.json();
                 document.getElementById('m-height').innerText = `${data.height / 10} m`;
                 document.getElementById('m-weight').innerText = `${data.weight / 10} kg`;
-
-                // 2. 取得 Species 資料以獲取多形態 (Varieties)
                 const speciesRes = await fetch(data.species.url);
                 const speciesData = await speciesRes.json();
-
-                // 3. 解析與載入 Mega / G-Max 形態
                 currentVarietiesData = [];
                 const varieties = speciesData.varieties || [];
-
                 if (varieties.length > 1) {
-                    formsContainer.style.display = 'flex';
+                    formsRow.style.display = 'flex';
                     let buttonsHtml = '';
-
                     for (let i = 0; i < varieties.length; i++) {
                         const v = varieties[i];
                         const vName = v.pokemon.name;
-
-                        // 過濾只留 一般, Mega, Mega X/Y, G-max 等特殊形態
-                        let label = '一般形態';
-                        let icon = '<i class="fa-solid fa-circle"></i>';
-
-                        if (vName.includes('-mega-x')) {
-                            label = 'Mega進化 X';
-                            icon = '<i class="fa-solid fa-bolt" style="color:#38BDF8;"></i>';
-                        } else if (vName.includes('-mega-y')) {
-                            label = 'Mega進化 Y';
-                            icon = '<i class="fa-solid fa-bolt" style="color:#F59E0B;"></i>';
-                        } else if (vName.includes('-mega')) {
-                            label = 'Mega進化';
-                            icon = '<i class="fa-solid fa-bolt" style="color:#FCD34D;"></i>';
-                        } else if (vName.includes('-gmax')) {
-                            label = '超極巨化';
-                            icon = '<i class="fa-solid fa-shield-halved" style="color:#EF4444;"></i>';
-                        } else if (!v.is_default) {
-                            // 其他區域形態不顯示在特別按鈕內 (或預留)
-                            continue;
-                        }
-
+                        let label = '一般';
+                        if (vName.includes('-mega-x')) label = 'Mega X';
+                        else if (vName.includes('-mega-y')) label = 'Mega Y';
+                        else if (vName.includes('-mega-z')) label = 'Mega Z';
+                        else if (vName.includes('-mega')) label = 'Mega';
+                        else if (vName.includes('-gmax')) label = '超極巨化';
+                        else if (!v.is_default) continue;
+                        // 純文字按鈕 (不使用圖案)
                         buttonsHtml += `
                             <button class="form-tab-btn ${v.is_default ? 'active' : ''}" id="form-btn-${i}" onclick="switchForm(${i}, '${baseZhName}')">
-                                ${icon} ${label}
+                                ${label}
                             </button>
                         `;
-
                         currentVarietiesData.push({
                             index: i,
                             label: label,
@@ -832,87 +648,72 @@
                             isDefault: v.is_default,
                             defaultTypes: data.types.map(t => t.type.name),
                             defaultHeight: data.height / 10,
-                            defaultWeight: data.weight / 10,
-                            defaultImg: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
+                            defaultWeight: data.weight / 10
                         });
                     }
-
                     formsContainer.innerHTML = buttonsHtml;
                 } else {
-                    formsContainer.style.display = 'none';
+                    formsRow.style.display = 'none';
                 }
-
-                // 4. 載入進化鏈
                 const evoRes = await fetch(speciesData.evolution_chain.url);
                 const evoData = await evoRes.json();
                 renderEvolutionChain(evoData.chain);
-
             } catch (err) {
                 evoContainer.innerHTML = `<div style="color: var(--text-sub);">進化鏈數據載入完成</div>`;
             }
         }
 
-        /* 點擊形態頁籤時，即時切換 Modal 中的圖片、名稱與詳細資料 */
+        /* 切換形態 (純文字按鈕觸發) */
         async function switchForm(varietyIndex, baseZhName) {
-            // 切換按鈕高亮樣式
-            document.querySelectorAll('.form-tab-btn').forEach(btn => btn.classList.remove('active'));
+            currentFormIndex = varietyIndex;
+            document.querySelectorAll('#m-forms-container .form-tab-btn').forEach(btn => btn.classList.remove('active'));
             const activeBtn = document.getElementById(`form-btn-${varietyIndex}`);
             if (activeBtn) activeBtn.classList.add('active');
-
             const item = currentVarietiesData.find(v => v.index === varietyIndex);
-            if (!item) return;
-
-            // 標題顯示
-            if (item.isDefault) {
-                document.getElementById('m-title').innerText = baseZhName;
-            } else {
-                document.getElementById('m-title').innerText = `${baseZhName} (${item.label})`;
-            }
-
-            // 如果是預設形態，直接恢復預設資料
-            if (item.isDefault) {
-                document.getElementById('m-img').src = item.defaultImg;
-                document.getElementById('m-height').innerText = `${item.defaultHeight} m`;
-                document.getElementById('m-weight').innerText = `${item.defaultWeight} kg`;
-                document.getElementById('m-types').innerHTML = item.defaultTypes.map(t => `<span class="type-badge type-${t}">${typeZhDict[t] || t}</span>`).join('');
+            if (!item || item.isDefault) {
+                document.getElementById('m-title').innerText = isShinyMode ? `${baseZhName} (Shiny)` : baseZhName;
+                updateArtworkImage();
+                if (item) {
+                    document.getElementById('m-height').innerText = `${item.defaultHeight} m`;
+                    document.getElementById('m-weight').innerText = `${item.defaultWeight} kg`;
+                    document.getElementById('m-types').innerHTML = item.defaultTypes.map(t => `<span class="type-badge type-${t}">${typeZhDict[t] || t}</span>`).join('');
+                }
                 return;
             }
-
-            // 非預設形態 (Mega / G-Max)，發送 Request 抓取該形態的圖片與屬性
+            // 非預設形態 (Mega / 極巨化)
+            document.getElementById('m-title').innerText = isShinyMode ? `${baseZhName} (${item.label} - Shiny)` : `${baseZhName} (${item.label})`;
             document.getElementById('m-img').style.opacity = '0.3';
             try {
                 const res = await fetch(item.url);
                 const data = await res.json();
-
-                // 圖片 (優先調用官方高清 Artwork，若無則抓前端 Spite)
-                const artwork = data.sprites?.other['official-artwork']?.front_default || data.sprites?.front_default;
-                document.getElementById('m-img').src = artwork;
-
-                // 身高與體重
+                // 原色/異色圖片獲取
+                const normalArt = data.sprites?.other['official-artwork']?.front_default || data.sprites?.front_default;
+                const shinyArt = data.sprites?.other['official-artwork']?.front_shiny || data.sprites?.front_shiny || normalArt;
+                document.getElementById('m-img').src = isShinyMode ? shinyArt : normalArt;
                 document.getElementById('m-height').innerText = `${data.height / 10} m`;
                 document.getElementById('m-weight').innerText = `${data.weight / 10} kg`;
-
-                // 屬性變更 (例如 Mega噴火龍 X 屬性變成 火+龍)
                 const types = data.types.map(t => t.type.name);
                 document.getElementById('m-types').innerHTML = types.map(t => `<span class="type-badge type-${t}">${typeZhDict[t] || t}</span>`).join('');
-
             } catch (err) {}
             document.getElementById('m-img').style.opacity = '1';
+        }
+
+        /* 根據 id 與 isShinyMode 更新預設形態圖片 */
+        function updateArtworkImage() {
+            const baseUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
+            document.getElementById('m-img').src = isShinyMode ? `${baseUrl}shiny/${currentPokemonId}.png` : `${baseUrl}${currentPokemonId}.png`;
         }
 
         function renderEvolutionChain(chainNode) {
             const evoContainer = document.getElementById('evolution-chain-container');
             evoContainer.innerHTML = '';
-
             let current = chainNode;
             let nodes = [];
-
             while (current) {
                 const pokeId = current.species.url.split('/').filter(Boolean).pop();
                 nodes.push({ id: pokeId, name: current.species.name });
                 current = current.evolves_to[0];
             }
-
             let chainHtml = '';
             nodes.forEach((node, index) => {
                 const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${node.id}.png`;
@@ -929,13 +730,11 @@
                     chainHtml += `<div style="color: var(--text-sub);"><i class="fa-solid fa-chevron-right"></i></div>`;
                 }
             });
-
             evoContainer.innerHTML = chainHtml;
         }
 
         function hideModal() { document.getElementById('detail-modal').classList.remove('active'); }
         function closeModal(e) { if (e.target.id === 'detail-modal') hideModal(); }
-
         window.onload = initData;
     </script>
 </body>
